@@ -33,7 +33,7 @@ if (isset($_POST['delete_review'])) {
 if (isset($_POST['edit_review'])) {
     $review_id = $_POST['review_id'];
     $review = $_POST['review'];
-    $conn->query("UPDATE reviews SET review = '$review' WHERE id = $review_id");
+    $conn->query("UPDATE reviews SET comment = '$review' WHERE id = $review_id");
     logAction($conn, 'EDIT', 'reviews', $review_id, $admin_username);
 }
 
